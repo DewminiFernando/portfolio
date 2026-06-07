@@ -21,7 +21,7 @@ export default function About() {
             </p>
 
             <p className="text-base sm:text-lg text-text-dark/95 leading-relaxed font-bold">
-              I enjoy working across the full stack from designing Python-based machine
+              I enjoy working across the full stack from designing Python based machine
               learning pipelines and building REST APIs to creating clean React interfaces
               that make complex systems easier to use. Academically, I currently hold a
               3.71 GPA with two consecutive Dean’s List recognitions.

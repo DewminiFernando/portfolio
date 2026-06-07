@@ -83,13 +83,13 @@ export default function Hero() {
             <div className="absolute top-8 right-6 text-3xl text-sage-dark/70 animate-float-slow select-none">
               ♡
             </div>
-            {/* Bottom Left: 🌿 */}
+            {/* Bottom Left: ✴︎ */}
             <div className="absolute bottom-6 left-8 text-4xl text-sage-dark/80 animate-float-slow select-none">
-              🌿
+              ☘︎
             </div>
-            {/* Bottom Right: ★ */}
+            {/* Bottom Right: ✶ */}
             <div className="absolute bottom-8 right-8 text-3xl text-sage-dark/70 animate-float-gentle select-none">
-              ★
+              ✶
             </div>
           </div>
         </div>

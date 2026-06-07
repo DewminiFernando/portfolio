@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { projects } from '../data/projects';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 
 /* ──────────────────────────────────────────────
    Mockup Previews (fallbacks when video is missing)
@@ -276,6 +277,7 @@ function ProjectMockup({ type }) {
 
 function VideoPreview({ project }) {
   const [videoError, setVideoError] = useState(false);
+  const [posterError, setPosterError] = useState(false);
 
   if (project.video && !videoError) {
     return (
@@ -288,6 +290,17 @@ function VideoPreview({ project }) {
         playsInline
         preload="metadata"
         onError={() => setVideoError(true)}
+        className="h-full w-full object-cover transition duration-300 group-hover:brightness-110"
+      />
+    );
+  }
+
+  if (project.poster && !posterError) {
+    return (
+      <img
+        src={project.poster}
+        alt={`${project.title} preview`}
+        onError={() => setPosterError(true)}
         className="h-full w-full object-cover transition duration-300 group-hover:brightness-110"
       />
     );
@@ -381,77 +394,92 @@ export default function Projects() {
                 </div>
 
                 {/* Right Column: Project Details */}
-                <div className="flex flex-col justify-between space-y-4">
+                <div className="flex h-full flex-col justify-between">
+                  {/* Top Content */}
                   <div className="space-y-3">
                     {/* Title & Status */}
                     <div className="flex items-center justify-between gap-4 w-full">
                       <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-text-dark group-hover:text-sage-dark transition-colors duration-200">
                         {project.title}
                       </h3>
+
                       <span
-                        className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold border shrink-0 ${
-                          project.status === 'Completed'
-                            ? 'bg-[#E6EFE7] text-[#2F3A32] border-[#7F9C84]/30'
-                            : 'bg-[#F8F5EE] text-[#5A6B5E] border-[#7F9C84]/20'
-                        }`}
+                        className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold border shrink-0 ${project.status === "Completed"
+                          ? "bg-[#E6EFE7] text-[#2F3A32] border-[#7F9C84]/30"
+                          : "bg-[#F8F5EE] text-[#5A6B5E] border-[#7F9C84]/20"
+                          }`}
                       >
                         {project.status}
                       </span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm sm:text-base text-text-muted font-bold leading-relaxed line-clamp-5">
+                    <p className="text-sm sm:text-base text-text-muted font-bold leading-relaxed mt-2">
                       {project.description}
                     </p>
+                  </div>
 
+                  {/* Bottom Content: Tech Stack + Links */}
+                  <div className="mt-auto pt-6">
                     {/* Tech Stack Chips */}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
+                    <div className="flex flex-wrap gap-1.5">
                       {project.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-2.5 py-0.5 bg-white-soft border border-sage-dark/12 rounded-full text-[10px] font-bold text-text-dark shadow-xs
-                            transition-transform duration-200 hover:scale-105"
+                          className="px-2.5 py-0.5 bg-white-soft border border-sage-dark/12 rounded-full text-[10px] font-bold text-text-dark shadow-xs transition-transform duration-200 hover:scale-105"
                         >
                           {t}
                         </span>
                       ))}
                     </div>
-                  </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-wrap items-center gap-3 pt-2">
-                    <a
-                      href={project.live && project.live !== '#' ? project.live : undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-bold shadow-xs transition-all duration-200 border ${
-                        project.live && project.live !== '#'
-                          ? 'bg-sage-main text-text-dark border-sage-dark/20 hover:bg-text-dark hover:text-cream hover:shadow-md hover:-translate-y-0.5 cursor-pointer'
-                          : 'bg-sage-main/40 text-text-muted border-sage-dark/10 cursor-default opacity-55'
-                      }`}
-                      onClick={(e) => {
-                        if (!project.live || project.live === '#') e.preventDefault();
-                      }}
-                    >
-                      <span>Live</span>
-                      <FaExternalLinkAlt size={10} />
-                    </a>
-                    <a
-                      href={project.github && project.github !== '#' ? project.github : undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-bold shadow-xs transition-all duration-200 border ${
-                        project.github && project.github !== '#'
-                          ? 'bg-white-soft text-text-dark border-sage-dark/20 hover:bg-sage-light hover:border-sage-dark/35 hover:shadow-md hover:-translate-y-0.5 cursor-pointer'
-                          : 'bg-white-soft/50 text-text-muted border-sage-dark/10 cursor-default opacity-55'
-                      }`}
-                      onClick={(e) => {
-                        if (!project.github || project.github === '#') e.preventDefault();
-                      }}
-                    >
-                      <FaGithub size={13} />
-                      <span>GitHub</span>
-                    </a>
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap items-center gap-3 mt-6">
+                      {(() => {
+                        const isLiveDisabled =
+                          !project.live || project.live === "#" || project.live.trim() === "";
+                        const isGithubDisabled =
+                          !project.github ||
+                          project.github === "#" ||
+                          project.github.trim() === "";
+
+                        return (
+                          <>
+                            <a
+                              href={isLiveDisabled ? undefined : project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-disabled={isLiveDisabled ? "true" : undefined}
+                              className={`h-10 w-10 flex items-center justify-center rounded-full border bg-sage-main text-text-dark border-sage-dark/20 transition-all duration-200 ${isLiveDisabled
+                                ? "opacity-50 cursor-not-allowed"
+                                : "shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-text-dark hover:text-cream cursor-pointer"
+                                }`}
+                              onClick={(e) => {
+                                if (isLiveDisabled) e.preventDefault();
+                              }}
+                            >
+                              <FiExternalLink size={16} />
+                            </a>
+
+                            <a
+                              href={isGithubDisabled ? undefined : project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-disabled={isGithubDisabled ? "true" : undefined}
+                              className={`h-10 w-10 flex items-center justify-center rounded-full border bg-white-soft text-text-dark border-sage-dark/20 transition-all duration-200 ${isGithubDisabled
+                                ? "opacity-50 cursor-not-allowed"
+                                : "shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-sage-light hover:border-sage-dark/35 cursor-pointer"
+                                }`}
+                              onClick={(e) => {
+                                if (isGithubDisabled) e.preventDefault();
+                              }}
+                            >
+                              <FaGithub size={18} />
+                            </a>
+                          </>
+                        );
+                      })()}
+                    </div>
                   </div>
                 </div>
               </div>

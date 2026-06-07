@@ -6,8 +6,8 @@ export const projects = [
     description:
       'BookVerse is a cozy book discovery web app built with React, Vite, and Tailwind CSS. It lets users explore books by mood and genre, track their reading progress, save favorites, and visualize their reading habits through an analytics dashboard',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js'],
-    live: '#',
-    github: '#',
+    live: 'https://bookverse-plum.vercel.app/',
+    github: 'https://github.com/DewminiFernando/BookVerse',
     previewType: 'bookshelf',
     video: '/project-videos/bookverse.mp4',
     poster: '/project-posters/bookverse.png',
@@ -15,12 +15,11 @@ export const projects = [
   {
     id: 2,
     title: 'TravelGenie App',
-    status: 'Building',
+    status: 'Completed',
     description:
-      'A travel planning application with destination recommendations, hotel suggestions, budget planning, itinerary support, and expense management features.',
-    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Flask'],
-    live: '#',
-    github: '#',
+      'A comprehensive travel planning mobile platform for Sri Lanka that helps users explore destinations, plan multi day trips, choose hotels, manage budgets, track expenses, and review travel experiences. The app supports guest, user, and admin modes, with features such as district based destination discovery, itinerary planning, accommodation management, transport schedules, budget tracking, and feedback management.',
+    tech: ['Expo', 'React Native', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    github: 'https://github.com/DewminiFernando/Travel_Genie_App',
     previewType: 'travel',
     video: '/project-videos/travelgenie-app.mp4',
     poster: '/project-posters/travelgenie-app.png',
@@ -28,12 +27,12 @@ export const projects = [
   {
     id: 3,
     title: 'TravelGenie Platform',
-    status: 'Building',
+    status: 'Completed',
     description:
-      'A full-stack travel planning platform for managing trips, recommendations, hotels, budgets, and travel expenses through a clean dashboard experience.',
-    tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Sequelize'],
-    live: '#',
-    github: '#',
+      'An AI assisted travel planning platform for Sri Lanka that helps users plan multi day trips through destination discovery, hotel recommendations, itinerary creation, budget planning, and expense tracking. Built with a React frontend, Express backend, Flask AI recommendation service, and PostgreSQL database, with my contribution focused on the Expenses Management module.',
+    tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Sequelize', 'Flask'],
+    live: 'https://travel-genie-da1t.vercel.app/',
+    github: 'https://github.com/DewminiFernando/Travel_Genie',
     previewType: 'platform',
     video: '/project-videos/travelgenie-platform.mp4',
     poster: '/project-posters/travelgenie-platform.png',
@@ -43,7 +42,7 @@ export const projects = [
     title: 'StudySprout AI',
     status: 'Building',
     description:
-      'StudySprout AI is an AI-powered study assistant that converts lecture PDFs into study guides, question banks, answers, and quizzes to help students revise more effectively.',
+      'StudySprout AI is an AI powered study assistant that converts lecture PDFs into study guides, question banks, answers, and quizzes to help students revise more effectively.',
     tech: [
       'React',
       'Tailwind CSS',
