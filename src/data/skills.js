@@ -1,0 +1,36 @@
+export const skills = [
+  // Existing skills
+  { name: 'HTML', level: 'Advanced', icon: 'FaHtml5', color: '#E34F26' },
+  { name: 'CSS', level: 'Advanced', icon: 'FaCss3Alt', color: '#1572B6' },
+  { name: 'JavaScript', level: 'Advanced', icon: 'FaJs', color: '#F7DF1E' },
+  { name: 'React.js', level: 'Advanced', icon: 'FaReact', color: '#61DAFB' },
+  { name: 'Tailwind CSS', level: 'Advanced', icon: 'SiTailwindcss', color: '#06B6D4' },
+  { name: 'Node.js', level: 'Intermediate', icon: 'FaNodeJs', color: '#339933' },
+  { name: 'Express.js', level: 'Intermediate', icon: 'SiExpress', color: '#000000' },
+  { name: 'MongoDB', level: 'Intermediate', icon: 'SiMongodb', color: '#47A248' },
+  { name: 'PostgreSQL', level: 'Intermediate', icon: 'SiPostgresql', color: '#4169E1' },
+  { name: 'Python', level: 'Advanced', icon: 'FaPython', color: '#3776AB' },
+  { name: 'Machine Learning', level: 'Learning', icon: 'FaBrain', color: '#FF6F61' },
+  { name: 'Git', level: 'Advanced', icon: 'FaGitAlt', color: '#F05032' },
+  { name: 'Vercel', level: 'Intermediate', icon: 'SiVercel', color: '#000000' },
+  { name: 'Figma', level: 'Intermediate', icon: 'FaFigma', color: '#F24E1E' },
+  { name: 'REST APIs', level: 'Intermediate', icon: 'FaServer', color: '#4CAF50' },
+
+  // New skills
+  { name: 'Java', level: 'Intermediate', icon: 'FaJava', color: '#007396' },
+  { name: 'SQL', level: 'Intermediate', icon: 'FaDatabase', color: '#4479A1' },
+  { name: 'FastAPI', level: 'Intermediate', icon: 'SiFastapi', color: '#009688' },
+  { name: 'Spring Boot', level: 'Learning', icon: 'SiSpringboot', color: '#6DB33F' },
+  { name: 'scikit-learn', level: 'Intermediate', icon: 'SiScikitlearn', color: '#F7931E' },
+  { name: 'pandas', level: 'Intermediate', icon: 'SiPandas', color: '#150458' },
+  { name: 'NumPy', level: 'Intermediate', icon: 'SiNumpy', color: '#4D77CF' },
+  { name: 'cosine similarity', level: 'Learning', icon: 'FaBrain', color: '#FF6F61' },
+  { name: 'content-based filtering', level: 'Learning', icon: 'FaFilter', color: '#FF8C00' },
+  { name: 'Random Forest', level: 'Learning', icon: 'FaTree', color: '#228B22' },
+  { name: 'feature engineering', level: 'Intermediate', icon: 'FaCogs', color: '#4682B4' },
+  { name: 'MySQL', level: 'Intermediate', icon: 'SiMysql', color: '#4479A1' },
+  { name: 'JWT Auth', level: 'Intermediate', icon: 'SiJsonwebtokens', color: '#d63aff' },
+  { name: 'Postman', level: 'Intermediate', icon: 'SiPostman', color: '#FF6C37' },
+  { name: 'Jupyter Notebooks', level: 'Advanced', icon: 'SiJupyter', color: '#F37626' },
+  { name: 'Agile / Scrum', level: 'Learning', icon: 'FaUsers', color: '#00A3E0' }
+];

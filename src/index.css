@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Schoolbell&display=swap');
+@import "tailwindcss";
+
+:root {
+  --sage-main: #C9D8CA;
+  --sage-light: #E6EFE7;
+  --sage-soft: #F3F8F3;
+  --sage-dark: #7F9C84;
+  --cream: #F8F5EE;
+  --white-soft: #FDFBF7;
+  --charcoal: #151816;
+  --text-dark: #2F3A32;
+  --text-muted: #5A6B5E;
+  --border-soft: rgba(127, 156, 132, 0.18);
+}
+
+@theme {
+  --color-sage-main: var(--sage-main);
+  --color-sage-light: var(--sage-light);
+  --color-sage-soft: var(--sage-soft);
+  --color-sage-dark: var(--sage-dark);
+  --color-cream: var(--cream);
+  --color-white-soft: var(--white-soft);
+  --color-charcoal: var(--charcoal);
+  --color-text-dark: var(--text-dark);
+  --color-text-muted: var(--text-muted);
+  --color-border-soft: var(--border-soft);
+}
+
+/* Global resets and typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ── Global Gaegu Handwritten Typography ── */
+* {
+  font-family: "Gaegu", cursive !important;
+  font-weight: 700 !important;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  font-family: "Gaegu", cursive !important;
+}
+
+/* Gaegu renders visually smaller — bump headings up a step */
+h1 { font-size: 1.15em; }
+h2 { font-size: 1.15em; }
+h3 { font-size: 1.12em; }
+h4 { font-size: 1.10em; }
+
+/* ── Section Headings (About, Skills, Projects, Education, Contact) ── */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2F3A32;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  background-color: #bfd6c4;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Custom animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite reverse;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-3deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Soft shadows and borders */
+.soft-shadow {
+  box-shadow: 0 8px 30px rgba(127, 156, 132, 0.12);
+}
+
+.soft-shadow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soft-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(127, 156, 132, 0.2);
+}
+
+/* Reset default styles that might interfere */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border-inline: none;
+  min-height: auto;
+  display: block;
+}
