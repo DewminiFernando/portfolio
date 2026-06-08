@@ -82,7 +82,7 @@ export default function Education() {
                     SLIIT · 2024 – Present
                   </p>
                   <p className="text-sm md:text-base text-text-muted leading-[1.8]">
-                    Achieved Dean's List recognition while pursuing studies in Information Technology and Artificial Intelligence, with a strong focus on artificial intelligence, machine learning, software engineering, and full-stack development.
+                    Achieved consecutive Dean's List recognitions while pursuing studies in Information Technology and Artificial Intelligence, with a strong focus on artificial intelligence, machine learning, software engineering, and full-stack development.
                   </p>
                 </div>
 

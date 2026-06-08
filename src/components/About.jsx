@@ -14,7 +14,7 @@ export default function About() {
           {/* Right Column: Bio & Small Tags */}
           <div className="col-span-1 md:col-span-8 space-y-6 text-left">
             <p className="text-base sm:text-lg text-text-dark/95 leading-relaxed font-bold">
-              I’m a third year B.Sc. (Hons) Information Technology undergraduate at SLIIT,
+              I'm a third year B.Sc. (Hons) Information Technology undergraduate at SLIIT,
               specializing in Artificial Intelligence, with a strong interest in machine
               learning, full stack development, and building digital products that are
               genuinely useful.
@@ -24,13 +24,13 @@ export default function About() {
               I enjoy working across the full stack from designing Python based machine
               learning pipelines and building REST APIs to creating clean React interfaces
               that make complex systems easier to use. Academically, I currently hold a
-              3.71 GPA with two consecutive Dean’s List recognitions.
+              3.71 GPA with two consecutive Dean's List recognitions.
             </p>
 
             <p className="text-base sm:text-lg text-text-dark/95 leading-relaxed font-bold">
-              Beyond coursework, I’ve applied my skills through hands on projects including
+              Beyond coursework, I've applied my skills through hands on projects including
               AI powered recommendation systems, full stack web applications, and deployed
-              production ready apps. I’m currently seeking an internship where I can
+              production ready apps. I'm currently seeking an internship where I can
               contribute to a real product team, learn from experienced engineers, and
               continue growing in applied AI, data driven systems, and full stack
               development.

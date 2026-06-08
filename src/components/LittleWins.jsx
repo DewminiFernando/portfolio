@@ -3,7 +3,7 @@ import { FiAward } from 'react-icons/fi';
 const wins = [
   {
     id: 1,
-    title: "Dean’s List Recognition",
+    title: "Dean's List Recognition",
     issuer: "SLIIT",
     date: "Year 1 Semester 2 · 2025",
     description: "Recognized for strong academic performance with a 3.825 GPA ",
@@ -11,7 +11,7 @@ const wins = [
   },
   {
     id: 2,
-    title: "Dean’s List Recognition",
+    title: "Dean's List Recognition",
     issuer: "SLIIT",
     date: "Year 2 Semester 1 · 2025",
     description: "Recognized for consistent academic excellence with a 3.75 GPA ",
@@ -31,7 +31,7 @@ export default function LittleWins() {
 
         {/* Intro line */}
         <p className="text-base md:text-lg text-text-muted leading-[1.8] mb-10" style={{ maxWidth: '52ch' }}>
-          Certificates and recognitions picked up along the way — small steps, steady progress.
+          Certificates and recognitions picked up along the way.
         </p>
 
         {/* Certificate Cards Grid */}
