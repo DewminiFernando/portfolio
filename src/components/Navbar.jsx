@@ -28,19 +28,19 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2 lg:gap-3">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="px-4 py-2 rounded-full text-sm font-bold border border-transparent hover:border-sage-dark/10 hover:bg-cream/60 transition-all duration-200"
+              className="px-4 py-2 rounded-full text-[15px] lg:text-base font-bold tracking-[0.075em] border border-transparent hover:border-sage-dark/10 hover:bg-cream/60 transition-all duration-200"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className="ml-4 px-5 py-2.5 bg-text-dark text-cream hover:bg-sage-dark hover:text-white-soft rounded-full text-sm font-bold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+            className="ml-4 px-6 py-3 bg-text-dark text-cream hover:bg-sage-dark hover:text-white-soft rounded-full text-[15px] lg:text-base font-bold tracking-[0.075em] shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
           >
             Hire Me
           </a>

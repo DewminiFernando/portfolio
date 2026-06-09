@@ -15,15 +15,15 @@ export default function Hero() {
         {/* Left Side Content */}
         <div className="flex flex-col items-start text-left space-y-6 max-w-xl">
           {/* Pill */}
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-sage-light text-text-dark border border-sage-dark/30 shadow-sm">
-            <span className="w-2.5 h-2.5 rounded-full bg-sage-dark mr-2 animate-pulse"></span>
+          <span className="inline-flex items-center px-5 py-2 rounded-full text-[15px] sm:text-base font-bold tracking-[0.075em] bg-sage-light text-text-dark border border-sage-dark/30 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-sage-dark mr-3 animate-pulse"></span>
             Actively seeking part-time or internship roles · Sri Lanka
           </span>
 
           {/* Heading and Subtitle */}
           <div className="space-y-3">
             <h1 className="font-bold tracking-tight leading-tight">
-              <span className="block whitespace-nowrap text-4xl sm:text-5xl text-sage-dark">Dewmi Fernando</span>
+              <span className="block whitespace-nowrap text-5xl sm:text-6xl text-sage-dark">Dewmi Fernando</span>
             </h1>
             <p className="text-xl sm:text-2xl font-bold text-sage-dark/90">
               I build clean digital experiences.

@@ -30,7 +30,7 @@ export default function LittleWins() {
         </div>
 
         {/* Intro line */}
-        <p className="text-base md:text-lg text-text-muted leading-[1.8] mb-10" style={{ maxWidth: '52ch' }}>
+        <p className="text-base md:text-lg text-text-muted leading-[1.8] mb-10 whitespace-normal sm:whitespace-nowrap max-w-none">
           Certificates and recognitions picked up along the way.
         </p>
 

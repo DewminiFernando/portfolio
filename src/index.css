@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Schoolbell&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Mimii";
+  src: url("./assets/fonts/mimii.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --sage-main: #C9D8CA;
@@ -40,36 +47,59 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Global Gaegu Handwritten Typography ── */
-* {
-  font-family: "Gaegu", cursive !important;
-  font-weight: 700 !important;
+/* Global typography balance */
+body {
+  font-family: "Mimii", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  color: var(--text-dark);
 }
 
-html,
-body,
-button,
-input,
-textarea,
-select,
-a,
-p,
-span,
+/* Keep headings cute and stronger */
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-div {
-  font-family: "Gaegu", cursive !important;
+.section-heading {
+  font-family: "Mimii", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1.25;
 }
 
-/* Gaegu renders visually smaller — bump headings up a step */
-h1 { font-size: 1.15em; }
-h2 { font-size: 1.15em; }
-h3 { font-size: 1.12em; }
-h4 { font-size: 1.10em; }
+/* Normal readable text */
+p,
+li,
+span {
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  line-height: 1.88;
+}
+
+/* Small/muted text should not disappear */
+.text-text-muted,
+.text-sage-dark,
+.text-xs,
+.text-sm {
+  font-weight: 600 !important;
+  letter-spacing: 0.065em;
+  line-height: 1.7;
+}
+
+/* Navbar and buttons */
+nav a,
+button,
+a {
+  font-weight: 700;
+  letter-spacing: 0.065em;
+}
+
+/* Avoid everything looking too packed */
+section {
+  line-height: 1.8;
+}
 
 /* ── Section Headings (About, Skills, Projects, Education, Contact) ── */
 .section-heading {
