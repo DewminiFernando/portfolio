@@ -7,7 +7,7 @@ const wins = [
     issuer: "SLIIT",
     date: "Year 1 Semester 2 · 2025",
     description: "Recognized for strong academic performance with a 3.825 GPA ",
-    certificateLink: "#"
+    certificateLink: "/certificates/deans-list-y1s2.pdf"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const wins = [
     issuer: "SLIIT",
     date: "Year 2 Semester 1 · 2025",
     description: "Recognized for consistent academic excellence with a 3.75 GPA ",
-    certificateLink: "#"
+    certificateLink: "/certificates/deans-list-y2s1.pdf"
   }
 ];
 
